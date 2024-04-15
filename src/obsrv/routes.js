@@ -2,10 +2,11 @@ const { Router } = require("express");
 const controller = require("./controller");
 const router = Router();
 
-router.post("/", controller.createData);
-router.get("/:id", controller.readDataById);
-router.put("/:id", controller.updateData);
-router.delete("/:id", controller.deleteData);
+router.post("/", controller.createDataset);
+router.get("/:id", controller.readDataset);
+router.put("/:id", controller.updateDataset);
+router.delete("/:id", controller.deleteDataset);
+router.patch("/:id",controller.patchDataset);
 
 
 module.exports = router;
